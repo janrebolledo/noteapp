@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
+    <title>Jan's Notes App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 </head>
 <body>
-    <div class="notes" id="app"></div>
-    <script src="./assets/js/main.js" type="module"></script>
+      <header class="navbar">
+        <section class="navbar-section">
+          <a href="/" class="navbar-brand mr-2"><img src="/assets/images/Jan Logo.png" class="header-logo" alt=""></a>
+          <a href="https://github.com/janrebolledo/notes-app" class="btn btn-link">GitHub</a>
+        </section>
+        <section class="navbar-section">
+          <a href="/editor.html" class="btn btn-primary">Editor</a>
+        </section>
+      </header>
+
+      <section class="section">
+        <div class="d-flex container">
+          <div class="hero col-12 text-center">
+            <div class="hero-body">
+              <h1>The last note app you'll ever need.</h1>
+              <p>An open source alternative developed by <a href="https://janrebolledo.com">Jan Rebolledo</a>.</p>
+              <a class="text-secondary my-2 p-2" href="/editor.html">
+                <button class="btn btn-primary">Go to the editor <i class="icon icon-arrow-right"></i>
+                </button>
+              </a>
+              <div class="col-6 col-mx-auto container myp-2">
+                <img class="img-responsive" src="/assets/images/Dark Theme.png" alt="">
+                <figcaption class="figure-caption label text-center">Screenshot from editor</figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 </body>
 </html>
