@@ -9,6 +9,7 @@ export default class NotesView {
             <div class="notes__settings-modal-container">
                 <div class="notes__settings-modal">
                     <div class="notes__settings-modal-sidebar">
+                        <h1>Settings</h1>
                         <span class="notes__settings-modal-sidebar-item active-tab" data-for-tab="1">Settings</span>
                         <span class="notes__settings-modal-sidebar-item" data-for-tab="2">About</span>
                     </div>
@@ -23,6 +24,8 @@ export default class NotesView {
                         </div>
                         <div id="about" class="notes__settings-modal-tab" data-tab="2">
                             <h2>About</h2>
+                            <p>This project is built with vanilla javascript and hosted locally. This app is entirely local, no data will ever be sent to a server.</p>
+                            <p>Source code available <a href="https://github.com/janrebolledo/notes-app">here</a>.</p>
                             <p>Copyright © 2021 <a href="https://janrebolledo.com">Jan Rebolledo</a>. Digital Experience by <a href="https://janrebolledo.com">Jan Rebolledo</a>.</p>
                         </div>
                     </div>
