@@ -13,6 +13,7 @@
     --foreground: #c0c0c0;
     --primary: #212121;
     --secondary: #1d1d1d;
+    --gradient: center / cover no-repeat url("../images/Sidebar Background Light.png")
 }
 
 .dark-theme {
@@ -20,14 +21,13 @@
     --secondary: #c0c0c0;
     --background: #212121;
     --foreground: #1d1d1d;
-}
-
-html {
-    overflow-y: hidden;
+    --gradient: center / cover no-repeat url("../images/Sidebar Background Dark.png")
 }
 
 body {
-    overflow-y: hidden;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
 p {
@@ -67,15 +67,14 @@ p {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    overflow-y: hidden;
 }
 
 .notes__sidebar {
     height: 100vh;
     width: 30%;
-    /* background: center / cover no-repeat linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url("../images/Sidebar Background.png"); */
-    background: radial-gradient(111% 111% at 74.29% -11%, #a9330030 0%, #00557030 100%), linear-gradient(127.43deg, #00D5C830 0%, #2200AA30 100%);
-    background-blend-mode: difference, normal;
+    background: var(--gradient);
+    /* background: radial-gradient(111% 111% at 74.29% -11%, #a9330030 0%, #00557030 100%), linear-gradient(127.43deg, #00D5C830 0%, #2200AA30 100%);
+    background-blend-mode: difference, normal; */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 32px;
 }
@@ -101,7 +100,7 @@ p {
     display: none !important;
     border: none;
     appearance: none;
-    --webkit-appearance: none;
+    -webkit-appearance: none;
     background-color: #00000000;
     color: var(--primary);
     border: none;
@@ -223,6 +222,7 @@ p {
     right: 0;
     bottom: 0;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: none;
     align-items: center;
     justify-content: center;
@@ -310,7 +310,7 @@ p {
     padding: 16px;
     width: 25%;
     appearance: none;
-    --webkit-appearance: none;
+    -webkit-appearance: none;
     background-color: #00000000;
     border: none;
     cursor: pointer;
@@ -351,6 +351,12 @@ p {
     }
     .notes__settings-theme-label {
         width: 100%;
+    }
+    .notes__settings-close {
+        margin: 0;
+        position: relative;
+        bottom: 110%;
+        left: 75%;
     }
     .notes__sidebar {
         width: 100%;
