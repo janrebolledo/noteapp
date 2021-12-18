@@ -22,8 +22,12 @@
     --foreground: #1d1d1d;
 }
 
+html {
+    overflow-y: hidden;
+}
+
 body {
-    overflow-y: clip;
+    overflow-y: hidden;
 }
 
 p {
