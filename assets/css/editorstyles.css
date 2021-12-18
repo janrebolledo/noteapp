@@ -23,7 +23,7 @@
 }
 
 body {
-    overflow-y: clip;
+    overflow-y: hidden;
 }
 
 p {
@@ -96,6 +96,7 @@ p {
     display: none;
     border: none;
     appearance: none;
+    --webkit-appearance: none;
     background-color: #00000000;
     color: var(--primary);
     width: 100%;
