@@ -98,12 +98,13 @@ p {
 }
 
 .mobile-menu-button {
-    display: none;
+    display: none !important;
     border: none;
     appearance: none;
     --webkit-appearance: none;
     background-color: #00000000;
     color: var(--primary);
+    border: none;
     width: 100%;
     text-align: center;
 }
@@ -361,7 +362,12 @@ p {
         top: 0;
     }
     .mobile-menu-label {
-        display: inline-block;
+        display: flex;
+        width: calc(100% - 72px);
+        justify-content: center;
+    }
+    .notes__add {
+        width: 36px;
     }
     .mobile-menu-arrow {
         transform: rotateX(0deg);
@@ -371,7 +377,6 @@ p {
         transform: rotateX(180deg);
         transition: all ease 0.2s;
     }
-    .mobile-menu-button:checked 
     .notes__preview {
         width: 100%;
     }
