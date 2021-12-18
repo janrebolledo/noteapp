@@ -37,6 +37,7 @@ export default class NotesView {
                     <a class="notes__sidebar-logo--link" href="/">
                         <img class="notes__sidebar-logo--image" alt="logo" src="./assets/images/Jan Logo.png">
                     </a>
+                    <input type="checkbox" name="mobile-menu-input" id="mobile-menu-input" class="mobile-menu-button"><label class="mobile-menu-label" for="mobile-menu-input"><span class="material-icons mobile-menu-arrow"> arrow_drop_up </span></label>
                     <button class="notes__add" type="button"><span class="material-icons">add</button>
                 </div>
                 <div class="notes__list"></div>

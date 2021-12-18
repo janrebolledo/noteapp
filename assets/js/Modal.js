@@ -57,6 +57,19 @@ export default function Modal () {
             disableDarkMode();
         }
     });
+
+    const button = document.querySelector(".mobile-menu-button")
+    const menu = document.querySelector(".notes__sidebar")
+
+    // document.querySelector(".notes__sidebar").disabled = !termsCheckBox.parentElement.querySelectorAll("input[type=checkbox]:checked").length;
+
+    button.addEventListener('click', () => {
+        if (menu.classList.contains("mobile-menu-open")) {
+            menu.classList.remove("mobile-menu-open")
+        } else {
+        menu.classList.add("mobile-menu-open");
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
