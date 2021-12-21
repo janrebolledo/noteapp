@@ -58,13 +58,18 @@ export default function Modal () {
 
     // Match browser theme
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        enableDarkMode();
-    };
-
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-        disableDarkMode();
-    };
+    window.addEventListener('load', (event) => {
+        darkMode = localStorage.getItem('dark-theme');
+        if (darkMode == null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                enableDarkMode();
+            };
+        
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                disableDarkMode();
+            };
+        }
+    });
 
     darkModeToggle.addEventListener('click', () => {
         darkMode = localStorage.getItem('dark-theme');
@@ -89,8 +94,6 @@ export default function Modal () {
     });
 
     // Exporting notes
-
-    // console.log(localStorage.notes);
 
     const exportNotesButton = document.getElementById("exportNotes");
 
@@ -117,6 +120,7 @@ export default function Modal () {
 
     if (viewWordCount == 'enabled') {
         enableWordCount();
+        wordCountSwitch.checked = true;
     }
 
     wordCountSwitch.addEventListener('click', () => {
