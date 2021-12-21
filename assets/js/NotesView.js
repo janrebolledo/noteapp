@@ -21,6 +21,13 @@ export default class NotesView {
                                 <div class="notes__settings-theme-label"><img class="theme-thumbnail" src="../assets/images/Light Theme.png"><p>Light</p></div>
                                 <div class="notes__settings-theme-label"><img class="theme-thumbnail" src="../assets/images/Dark Theme.png"><p>Dark</p></div>
                             </button>
+                            <p>Export Notes</p>
+                            <button id="exportNotes" class="button">Copy to Clipboard</button>
+                            <p>Display Word Count</p>
+                            <label class="toggle-control">
+                                <input type="checkbox" id="wordCount">
+                                <span class="control"></span>
+                            </label>
                         </div>
                         <div id="about" class="notes__settings-modal-tab" data-tab="2">
                             <h2>About</h2>
@@ -48,6 +55,7 @@ export default class NotesView {
             <div class="notes__preview">
                 <input class="notes__title" type="text" placeholder="New Note...">
                 <textarea class="notes__body" id="notes__body" placeholder="Start typing..."></textarea>
+                <p class="notes__word-count">Word Count: <span id="wordCountSpan"></span></p>
             </div>
         `;
 

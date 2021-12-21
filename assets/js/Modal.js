@@ -1,4 +1,7 @@
 export default function Modal () {
+
+    // Close/Open modal function
+
     const open = document.querySelector('.notes__settings')
     const close = document.querySelector('.notes__settings-close')
     const modal = document.querySelector('.notes__settings-modal-container')
@@ -10,6 +13,8 @@ export default function Modal () {
     close.addEventListener('click', () => {
         modal.classList.remove('modal-open');
     })
+
+    // Modal tabs functions
 
     document.querySelectorAll(".notes__settings-modal-sidebar-item").forEach(button => {
         button.addEventListener("click", () => {
@@ -32,6 +37,8 @@ export default function Modal () {
         });
     });
 
+    // Dark mode
+
     let darkMode = localStorage.getItem('dark-theme');
     const darkModeToggle = document.querySelector('#notes__settings-theme-changer');
 
@@ -48,6 +55,8 @@ export default function Modal () {
     if (darkMode == 'enabled') {
         enableDarkMode();
     }
+
+    // Match browser theme
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         enableDarkMode();
@@ -66,6 +75,8 @@ export default function Modal () {
         }
     });
 
+    // Mobile Menu
+
     const button = document.querySelector(".mobile-menu-button")
     const menu = document.querySelector(".notes__sidebar")
 
@@ -74,6 +85,46 @@ export default function Modal () {
             menu.classList.remove("mobile-menu-open")
         } else {
         menu.classList.add("mobile-menu-open");
+        }
+    });
+
+    // Exporting notes
+
+    // console.log(localStorage.notes);
+
+    const exportNotesButton = document.getElementById("exportNotes");
+
+    exportNotesButton.addEventListener("click", () => {
+        navigator.clipboard.writeText(JSON.stringify(localStorage.notes));
+    })
+
+    // Word Count Switch
+
+    const wordCountP = document.querySelector(".notes__word-count");
+
+    let viewWordCount = localStorage.getItem('viewWordCount');
+    const wordCountSwitch = document.getElementById('wordCount');
+
+    const enableWordCount = () => {
+        wordCountP.classList.add('notes__word-count--active');
+        localStorage.setItem('viewWordCount', 'enabled');
+    };
+
+    const disableWordCount = () => {
+        wordCountP.classList.remove('notes__word-count--active');
+        localStorage.setItem('viewWordCount', null);
+    };
+
+    if (viewWordCount == 'enabled') {
+        enableWordCount();
+    }
+
+    wordCountSwitch.addEventListener('click', () => {
+        viewWordCount = localStorage.getItem('viewWordCount');
+        if (viewWordCount !== 'enabled') {
+            enableWordCount();
+        } else {
+            disableWordCount();
         }
     });
 }
