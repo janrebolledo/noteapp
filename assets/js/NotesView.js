@@ -19,7 +19,7 @@ export default class NotesView {
                             <p>Theme</p>
                             <button id="notes__settings-theme-changer" class="notes__settings-theme-changer">
                                 <div class="notes__settings-theme-label"><img class="theme-thumbnail" src="../assets/images/Light Theme.png"><p>Light</p></div>
-                                <div class="notes__settings-theme-label"><img class="theme-thumbnail" src="../assets/images/dark Theme.png"><p>Dark</p></div>
+                                <div class="notes__settings-theme-label"><img class="theme-thumbnail" src="../assets/images/Dark Theme.png"><p>Dark</p></div>
                             </button>
                         </div>
                         <div id="about" class="notes__settings-modal-tab" data-tab="2">

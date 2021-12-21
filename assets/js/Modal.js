@@ -49,6 +49,14 @@ export default function Modal () {
         enableDarkMode();
     }
 
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        enableDarkMode();
+    };
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        disableDarkMode();
+    };
+
     darkModeToggle.addEventListener('click', () => {
         darkMode = localStorage.getItem('dark-theme');
         if (darkMode !== 'enabled') {
