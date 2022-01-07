@@ -39,6 +39,16 @@ export default class NotesView {
                     <button class="notes__settings-close"><span class="material-icons">close</span></button>
                 </div>
             </div>
+            <div id="searchModal" class="search-modal">
+                <div class="search-modal__container">
+                    <div class="search-modal__header">
+                        <h2>Search</h2>
+                        <button class="search-modal__close"><span class="material-icons">close</span></button>
+                    </div>
+                    <input placeholder="Search notes..." type="text" id="searchBar" class="search-bar">
+                    <div class="search-modal__results"></div>
+                </div>
+            </div>
             <div class="notes__sidebar">
                 <div class="notes__sidebar-header">
                     <a class="notes__sidebar-logo--link" href="/">
@@ -49,7 +59,10 @@ export default class NotesView {
                 </div>
                 <div class="notes__list"></div>
                 <div class="notes__sidebar-footer">
-                <button class="notes__settings" type="button"><span class="material-icons">settings</button>
+                <button class="notes__settings" type="button"><span class="material-icons">settings</span></button>
+                <div class="notes__sidebar-search">
+                    <span class="material-icons search-icon">search</span>
+                </div>
                 </div>
             </div>
             <div class="notes__preview">

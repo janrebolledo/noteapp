@@ -2,6 +2,7 @@ import NotesView from "./NotesView.js";
 import NotesAPI from "./NotesAPI.js";
 import Modal from "./Modal.js"
 import WordCount from "./WordCount.js"
+import SearchModal from "./SearchModal.js"
 
 export default class App {
     constructor(root) {

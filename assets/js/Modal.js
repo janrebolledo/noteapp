@@ -5,6 +5,7 @@ export default function Modal () {
     const open = document.querySelector('.notes__settings')
     const close = document.querySelector('.notes__settings-close')
     const modal = document.querySelector('.notes__settings-modal-container')
+    const searchModal = document.querySelector('#searchModal')
 
     open.addEventListener('click', () => {
         modal.classList.add('modal-open');
@@ -13,6 +14,20 @@ export default function Modal () {
     close.addEventListener('click', () => {
         modal.classList.remove('modal-open');
     })
+
+    document.onkeydown = function (e) {
+        if (e.which == 27) {
+          if (modal.classList.contains("modal-open")) {
+            modal.classList.remove("modal-open");
+          }
+          else {
+            if (searchModal.classList.contains("modal-open")) {
+                searchModal.classList.remove("modal-open")
+            };
+            modal.classList.add("modal-open");
+          }
+        }
+    };
 
     // Modal tabs functions
 
