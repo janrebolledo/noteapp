@@ -1,90 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jan's Notes App</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-</head>
-<body>
-      <header class="navbar">
-        <section class="navbar-section">
-          <a href="/" class="navbar-brand mr-2"><img src="/assets/images/Jan Logo.png" class="header-logo" alt=""></a>
-          <a href="https://github.com/janrebolledo/notes-app" class="btn btn-link text-success">GitHub</a>
-        </section>
-        <section class="navbar-section">
-          <a href="/editor.html" class="btn btn-success">Editor</a>
-        </section>
-      </header>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <section class="navbar-section">
+        <a href="/" class="navbar-brand mr-2"
+          ><img src="/assets/images/Jan Logo.png" class="header-logo" alt=""
+        /></a>
+        <a
+          href="https://github.com/janrebolledo/notes-app"
+          class="btn btn-link text-success"
+          >GitHub</a
+        >
+      </section>
+      <section class="navbar-section">
+        <a href="/editor.html" class="btn btn-success">Editor</a>
+      </section>
+    </header>
 
-      <section class="section">
-        <div class="d-flex container">
-          <div class="hero col-12 text-center">
-            <div class="hero-body">
-              <h1>The last note app you'll ever need.</h1>
-              <p>An open source alternative developed by <a class="text-success" href="https://janrebolledo.com">Jan Rebolledo</a>.</p>
-              <a class="text-secondary mx-2 p-2" href="/editor.html">
-                <button class="btn btn-success">Go to the editor <i class="icon icon-arrow-right"></i>
-                </button>
-              </a>
-              <div class="col-6 col-md-auto col-mx-auto container my-2 p-2">
-                <div class="comparison-slider">
-                  <figure class="comparison-before">
-                    <img src="/assets/images/Dark Theme.png" alt="" class="img-responsive">
-                    <div class="comparison-label">Dark Theme</div>
-                  </figure>
-                
-                  <figure class="comparison-after">
-                    <img src="/assets/images/Light Theme.png" alt="" class="img-responsive">
-                    <div class="comparison-label">Light Theme</div>
-                    <textarea class="comparison-resizer" readonly></textarea>
-                  </figure>
-                </div>
-                <figcaption class="figure-caption label text-center my-2">Screenshot from editor</figcaption>
+    <section class="section">
+      <div class="d-flex container">
+        <div class="hero col-12 text-center">
+          <div class="hero-body">
+            <h1>The last note app you'll ever need.</h1>
+            <p>
+              An open source alternative developed by
+              <a class="text-success" href="https://janrebolledo.com"
+                >Jan Rebolledo</a
+              >.
+            </p>
+            <a class="text-secondary mx-2 p-2" href="/editor.html">
+              <button class="btn btn-success">
+                Go to the editor <i class="icon icon-arrow-right"></i>
+              </button>
+            </a>
+            <a
+              class="text-secondary mx-2 p-2"
+              href="/assets/jans-notes-app-win32-x64.zip"
+              download=""
+            >
+              <button class="btn btn-success">
+                Download the desktop app <i class="icon icon-arrow-right"></i>
+              </button>
+            </a>
+            <div class="col-6 col-md-auto col-mx-auto container my-2 p-2">
+              <div class="comparison-slider">
+                <figure class="comparison-before">
+                  <img
+                    src="/assets/images/Dark Theme.png"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="comparison-label">Dark Theme</div>
+                </figure>
+
+                <figure class="comparison-after">
+                  <img
+                    src="/assets/images/Light Theme.png"
+                    alt=""
+                    class="img-responsive"
+                  />
+                  <div class="comparison-label">Light Theme</div>
+                  <textarea class="comparison-resizer" readonly></textarea>
+                </figure>
               </div>
+              <figcaption class="figure-caption label text-center my-2">
+                Screenshot from editor
+              </figcaption>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container grid-lg p-2">
-          <h2 class="text-center">Features</h2>
-          <div class="container columns d-flex mx-2 p-2">
-            <div class="col-2 col-sm-auto p-2 col-mx-auto">
-              <h5 class="label label-secondary text-success">Lightweight</h5>
-              <p class="hide-md">The entire app is &#62; ~7 mb to reduce any lag.</p>
-              <p class="show-md">The entire app<br> is &#62; ~7 mb to reduce any lag.</p>
-            </div>
-            <div class="col-2 col-sm-auto p-2 col-mx-auto">
-              <h5 class="label label-secondary text-success">Open Source</h5>
-              <p class="hide-md">Always free and open source, your data is locally hosted and will never reach a server.</p>
-              <p class="show-md">Always free and open source,<br> your data is locally hosted and<br> will never reach a server.</p>
-            </div>
-            <div class="col-2 col-sm-auto p-2 col-mx-auto">
-              <h5 class="label label-secondary text-success">Beautiful UI</h5>
-              <p class="hide-md">A UI clutter-free to focus on what's important.</p>
-              <p class="show-md">A UI clutter-free<br>to focus on what's important.</p>
-            </div>
+    <section class="section">
+      <div class="container grid-lg p-2">
+        <h2 class="text-center">Features</h2>
+        <div class="container columns d-flex mx-2 p-2">
+          <div class="col-2 col-sm-auto p-2 col-mx-auto">
+            <h5 class="label label-secondary text-success">Lightweight</h5>
+            <p class="hide-md">
+              The entire app is &#62; ~7 mb to reduce any lag.
+            </p>
+            <p class="show-md">
+              The entire app<br />
+              is &#62; ~7 mb to reduce any lag.
+            </p>
+          </div>
+          <div class="col-2 col-sm-auto p-2 col-mx-auto">
+            <h5 class="label label-secondary text-success">Open Source</h5>
+            <p class="hide-md">
+              Always free and open source, your data is locally hosted and will
+              never reach a server.
+            </p>
+            <p class="show-md">
+              Always free and open source,<br />
+              your data is locally hosted and<br />
+              will never reach a server.
+            </p>
+          </div>
+          <div class="col-2 col-sm-auto p-2 col-mx-auto">
+            <h5 class="label label-secondary text-success">Beautiful UI</h5>
+            <p class="hide-md">
+              A UI clutter-free to focus on what's important.
+            </p>
+            <p class="show-md">
+              A UI clutter-free<br />to focus on what's important.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="section">
-        <div class="container grid-lg">
-          <div class="container text-center p-centered grid-lg mx-2 p-2">
-            <div class="col-auto col-mx-auto">
-              <p>Copyright © 2021 <a class="text-success" href="https://janrebolledo.com">Jan Rebolledo</a>. Digital Experience by <a class="text-success"
-                  href="https://janrebolledo.com">Jan Rebolledo</a>.</p>
-            </div>
+    <footer class="section">
+      <div class="container grid-lg">
+        <div class="container text-center p-centered grid-lg mx-2 p-2">
+          <div class="col-auto col-mx-auto">
+            <p>
+              Copyright © 2021
+              <a class="text-success" href="https://janrebolledo.com"
+                >Jan Rebolledo</a
+              >. Digital Experience by
+              <a class="text-success" href="https://janrebolledo.com"
+                >Jan Rebolledo</a
+              >.
+            </p>
           </div>
         </div>
-      </footer>
-      
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
